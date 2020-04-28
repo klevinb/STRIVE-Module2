@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to have a great display
+
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+
+NOTE:
+Most of the time, even the most expert of designers, need inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotity or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+
+      /* EXERCISE 2 
+            Based on the artists you like the most, create a combination of colors 
+            to override bootstrap standard and make your website unique
+         */
+    </style>
+  </head>
+  <body>
+    
+    <!-- EXERCISE 3 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MusKick</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item btn btn-outline-warning m-1 active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1">
+                  <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          
+
+
+        <div class="container ">
+            <!-- EXERCISE 8
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+            -->
+            <div id="carouselExampleCaptions" class="carousel slide mt-3 shadow p-3 mb-5 bg-white rounded" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="image/mero.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Ya Hero Ya Mero</h5>
+                      <p>The album was released on 15 March 2019</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/ynwmelly.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Murder on My Mind</h5>
+                      <p>The song is from his debut mixtape I Am You</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/mckresha.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Rapsodat N' Rap T'Sotit</h5>
+                      <p>The album was released June 10, 2016</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            <!-- EXERCISE 4
+            Create a Responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 shadow p-3 mb-5 bg-white rounded">
+                <div class="col mt-4 mb-4">
+                    <div class="card">
+                      <img src="image/Beterdayz.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">2Pac - Beter Dayz</h5>
+                        <p class="card-text ">
+                            Better Dayz is the eighth studio album and fourth posthumous album by the late American rapper 2Pac,
+                            the third to be released without the artist's creative input and is the last to be a double-album.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mt-4 mb-4">
+                    <div class="card">
+                      <img src="image/Recovery_Album_Cover.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Eminem - Recovery</h5>
+                        <p class="card-text ">
+                            Recovery is the seventh studio album by American rapper Eminem.
+                            It was released on June 18, 2010, by Aftermath Entertainment, Shady Records, and Interscope Records.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mt-4 mb-4">
+                    <div class="card">
+                      <img src="image/Drakealbum.png" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Drake - Nothing Was the Same</h5>
+                        <p class="card-text ">
+                            othing Was the Same is the third studio album by Canadian rapper Drake.
+                            It was released on September 24, 2013, through OVO Sound, Republic Records, and Young Money Entertainment,
+                            and distributed by Cash Money Records. 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mt-4 mb-4">
+                    <div class="card">
+                      <img src="image/default.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Lyrical Son - ZIMASAMSHEVY</h5>
+                        <p class="card-text">
+                            Lyrical Son's 2nd album, the first under the P.I.N.T label,
+                            "ZimaSamShevi" - "Miza Mas Veshi" because the celebration is like a fly in the ear of every rapper in Albania.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    
+    
+
+    <!-- EXERCISE 6
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+    <!-- EXERCISE 7
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+        <div class="row mt-3 shadow p-3 mb-5 bg-white rounded">
+            <div class="col-md-6">
+                <div class="card">
+                    <h5 class="card-header">Worst Album</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="image/worstalbum.png" alt="..." class="img-thumbnail">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Name of Album</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h5 class="card-header">Favourite Singer</h5>
+                    <div class="row">
+                        <div class="col-md-6 mt-5">
+                            <img src="image/meroT.jpg" alt="Mero" class="img-thumbnail">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Mero</h5>
+                                <p class="card-text">Enes Meral (born 28 July 2000), known professionally as Mero,
+                                    is a German rapper of Turkish descent from Rüsselsheim am Main.
+                                    He rose to prominence in 2018 on Instagram and his debut single "Baller los",
+                                    which debuted at the top of the German and Austrian single charts.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+
+    <!-- EXERCISE 9
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXERCISE 10
+            Every time the user clicks on a album picture, toggle the album details
+        -->
+
+    <!-- EXERCISE 11
+            Add a button to each section. By clicking on it the section appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 12
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    </div>
+        
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        
+            <div class="container text-center">
+                <small>Copyright &copy; Your Website</small>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ml-5">
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ml-5">
+                    <p>Address : Unknown</p>
+                    <p>Phone : 00000000</p>
+                    <p>Email : ------@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+  </body>
+</html>

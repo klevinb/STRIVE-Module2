@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to have a great display
+
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+
+NOTE:
+Most of the time, even the most expert of designers, need inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotity or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+
+      /* EXERCISE 2 
+            Based on the artists you like the most, create a combination of colors 
+            to override bootstrap standard and make your website unique
+         */
+    </style>
+  </head>
+  <body>
+    
+    <!-- EXERCISE 3 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">MusKick</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item btn btn-outline-warning m-1">
+                  <a class="nav-link" href="d2.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1 active" >
+                  <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+    <!-- EXERCISE 5
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+        <div class="container">
+                <div class="row mt-3 shadow p-3 mb-5 bg-white rounded">
+                    <div class="col-md-8">
+                      <img class="img-fluid" src="image/image.jpg" alt="" />
+                    </div>
+            
+                    <div class="col-md-4 " id="project">
+                      <h3 class="my-3">Music to Be Murdered By</h3>
+                      <p>
+                        Music to Be Murdered By
+                        is the eleventh studio album by American rapper Eminem.
+                        It was released on January 17, 2020, by Aftermath Entertainment,
+                        Interscope Records and Shady Records. It was released as a surprise with 
+                        no prior announcement, similarly to his previous and tenth studio album Kamikaze
+                         (2018). The album was produced by Eminem and Dr. Dre, amongst other producers. 
+                         
+                      </p>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                        <table class="table mt-3 shadow p-3 mb-5 bg-white rounded">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Writer(s)</th>
+                                <th scope="col">Length</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>"Premonition" (Intro)</td>
+                                    <td>Marshall MathersAndre YoungMark Batson</td>
+                                    <td>2:53</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                  </div>
+                  
+    <!-- EXERCISE 6
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+    <!-- EXERCISE 7
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+
+    <!-- EXERCISE 8
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <!-- EXERCISE 9
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXERCISE 10
+            Every time the user clicks on a album picture, toggle the album details
+        -->
+
+    <!-- EXERCISE 11
+            Add a button to each section. By clicking on it the section appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 12
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    </div>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        
+        <div class="container text-center">
+            <small>Copyright &copy; Your Website</small>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ml-5">
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
+                    </li>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 ml-5">
+                <p>Address : Unknown</p>
+                <p>Phone : 00000000</p>
+                <p>Email : ------@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+  </body>
+</html>
