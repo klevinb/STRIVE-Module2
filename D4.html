@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+    The app is pretty straight forward:
+    - The user can add a list of names
+    - The user can set the number of teams
+    - Every time the user clicks on the "assign" button, a random name is placed in a team and removed from the list
+    - Each team should be inside a "column"
+    - [EXTRA] Create a button to remove an user from a team, putting him back in the main list
+    - [EXTRA] Create a button to reset the state of the app
+-->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">NamesList</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse text-center pl-4" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link btn btn-outline-light" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>           
+          </ul>
+        </div>
+      </nav>
+    <div class="container-fluid my-5">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Names</h5>
+                        <hr>
+                        <ul id="nameList">
+                        </ul>
+                    </div>
+                    
+                  </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Number Of Teams</h5>
+                        <hr>
+                        <form>
+                            <input type="number" id="teamsNr" class="text-center" value="4" disabled/>
+                            <button id="addTeamButton" class="btn btn-outline-primary" onclick="addTeams()">Add Teams</button>
+                            <button id="clearButton" class="btn btn-outline-warning" onclick="clear()">Clear Teams</button>
+                        </form>
+                        <hr>
+                            <input type="button" class="btn btn-outline-primary" id="addTeamNames" onclick="addNames()" value="Add Members"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="teamsDiv row row-cols-2 pt-4 row-cols-md-4">
+           
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function(){
+            let names = ["Alberto","Aleks","Alina","Andrew","Davide","Detart","Emmanuel","Eriseld"]
+            let reference = document.querySelector("#nameList")
+            for(let i=0; i<names.length; i++){
+                let item = document.createElement("li")
+                item.innerText = names[i]
+                reference.appendChild(item)
+            }
+        }
+        function addTeams(){
+                let nrOfTeams = document.querySelector("#teamsNr").value
+                let reference = document.querySelector(".teamsDiv")
+
+                for(let i=0; i<nrOfTeams;i++){
+                    let col = document.createElement("div")
+                    col.classList = "col pt-4 col-12 col-md-4 col-lg-3"
+                    let card = document.createElement("div")
+                    card.classList = "card"
+                    let cardBody = document.createElement("div")
+                    cardBody.classList = "card-body teams"
+                    let h5 = document.createElement("h5")
+                    h5.innerText = "Team "+(i+1)
+                    let hr = document.createElement("hr")
+                    let ol = document.createElement("ol")
+                    ol.classList = "teamsList"+(i+1)
+                    
+                    cardBody.appendChild(h5)
+                    cardBody.appendChild(hr)
+                    cardBody.appendChild(ol)
+                    card.appendChild(cardBody)
+                    col.appendChild(card)
+                    reference.appendChild(col)
+                }
+            }
+
+        function clear(){
+        }
+
+        function addNames(){
+           let reference = document.querySelectorAll("#nameList li")
+           let newReference = document.querySelector(".teamsList1")
+
+           for(let i=0; i<2; i++){
+                let li = document.createElement("li")
+                li.innerText = reference[i].innerText
+                newReference.appendChild(li)
+                reference[i].remove()
+           }
+           console.log(length)
+        }
+
+    </script>
+</body>
+</html>
