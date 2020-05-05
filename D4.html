@@ -51,7 +51,7 @@
                         <h5 class="card-title text-center">Number Of Teams</h5>
                         <hr>
                         <form>
-                            <input type="number" id="teamsNr" class="text-center" value="4" disabled/>
+                            <input type="number" id="teamsNr" class="text-center" value="0" />
                             <button id="addTeamButton" class="btn btn-outline-primary" onclick="addTeams()">Add Teams</button>
                             <button id="clearButton" class="btn btn-outline-warning" onclick="clear()">Clear Teams</button>
                         </form>
@@ -96,7 +96,7 @@
                     h5.innerText = "Team "+(i+1)
                     let hr = document.createElement("hr")
                     let ol = document.createElement("ol")
-                    ol.classList = "teamsList"+(i+1)
+                    ol.classList = "teamsList"
                     
                     cardBody.appendChild(h5)
                     cardBody.appendChild(hr)
@@ -105,22 +105,35 @@
                     col.appendChild(card)
                     reference.appendChild(col)
                 }
+
+                document.querySelector("#addTeamButton").disabled = true
             }
 
         function clear(){
         }
 
         function addNames(){
-           let reference = document.querySelectorAll("#nameList li")
-           let newReference = document.querySelector(".teamsList1")
+            let names = document.querySelectorAll("#nameList li")
+            //let newReference = document.querySelector(`.teamsList${teamReference}`)
 
-           for(let i=0; i<2; i++){
-                let li = document.createElement("li")
-                li.innerText = reference[i].innerText
-                newReference.appendChild(li)
-                reference[i].remove()
-           }
-           console.log(length)
+            let teams =document.querySelectorAll(".teamsDiv .teamsList")
+            let randomTeamIndex =  Math.floor(Math.random() * teams.length)
+            let selectedTeam = teams[randomTeamIndex]
+
+            let currentRandomNameIndex = Math.floor(Math.random() * names.length)
+            let currentRandomName = names[currentRandomNameIndex]
+
+            let li = document.createElement("li")
+            li.innerText = currentRandomName.innerText
+            selectedTeam.appendChild(li)
+            currentRandomName.remove()
+
+        //    for(let i=0; i<2; i++){
+        //         let li = document.createElement("li")
+        //         li.innerText = reference[i].innerText
+        //         newReference.appendChild(li)
+        //         reference[i].remove()
+        //    }
         }
 
     </script>
