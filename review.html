@@ -66,12 +66,10 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                 </li>
                 <li class="nav-item btn btn-outline-warning m-1 dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                    Track List
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <input class="dropdown-item" type="button" value="Add Track" data-toggle="modal" data-target="#staticBackdrop" />
                   </div>
                 </li>
               </ul>
@@ -118,9 +116,8 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 <thead class="thead-dark">
                                   <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Tittle</th>
+                                    <th scope="col">Length</th>
                                     <th scope="col">Delete</th>
                                   </tr>
                                 </thead>
@@ -128,7 +125,6 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                   <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Otto</td>
                                     <td>@mdo</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">Danger</button>
@@ -137,7 +133,6 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>Jacob</td>
-                                    <td>Thornton</td>
                                     <td>@fat</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">Danger</button>
@@ -146,7 +141,6 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                   <tr>
                                     <th scope="row">3</th>
                                     <td>Larry</td>
-                                    <td>the Bird</td>
                                     <td>@twitter</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">Danger</button>
@@ -155,9 +149,64 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </tbody>
                               </table>
                         </table>
-
+                        <input class="btn btn-primary" type="button" value="Add Track" data-toggle="modal" data-target="#staticBackdrop" />
                     </div>
-                    
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Add Track</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track number</span>
+                                      </div>
+                                      <input type="number" class="form-control" required min="1" max="10">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track name</span>
+                                      </div>
+                                      <input type="text" class="form-control" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"  id="inputGroup-sizing-default">Track length</span>
+                                      </div>
+                                      <input type="time" class="form-control" required>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track featuring</span>
+                                      </div>
+                                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Live Track</span>
+                                      </div>
+                                      <input type="checkbox" id="checkbox" class="form-control" >
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" id="clearBtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" id="addBtn" class="btn btn-primary" >Add Track</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                   
     <!-- EXERCISE 6
@@ -196,33 +245,47 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
         -->
     </div>
     <footer id="sticky-footer" class=" bg-dark text-white-50">
-        
-        <div class="container text-center">
-            <small>Copyright &copy; Your Website</small>
-        </div>
-        <div class="row">
-            <div class="col-md-6 ml-5">
-                <ul class="list-unstyled">
-                    <li class="media">
-                        <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
-                    </li>
-                    <li>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" width="20px" height="20px" /><p class="btn btn-outline-warning ml-3">MusKick</p>
-                    </li>
-                </ul>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 pt-3 text-center d-flex justify-content-center flex-column">
+              <p><b>INFO</b></p>
+              <p><b>Addres : </b>Oslo, Norway</p>
+              <p><b>Phone : </b> 0000000</p>
+              <p><b>Email : </b>Oslo, Norway</p>
+              <p><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" height="20px" width="20px"/> MusKick</p>
+              <p><img src="https://vollgard.no/wp-content/uploads/2016/02/instagram-logo-vector-png-7-300x294.png" height="20px" width="20px"/> MusKick</p>
             </div>
-            <div class="col-md-3 ml-5">
-                <p>Address : Unknown</p>
-                <p>Phone : 00000000</p>
-                <p>Email : ------@gmail.com</p>
+            <div class="col-4 pt-3 pb-5">
+              <p>Contac US</p>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputText1">Message</label>
+                  <textarea type="text" class="form-control" id="exampleInputText1"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </form>
             </div>
+            <div class="col-4 pt-3 text-center d-flex justify-content-center flex-column">
+              <p><b>Nav Links</b></p>
+              <ol style="list-style:none; padding:0">
+                <li><a href="D2.html">Home</a></li>
+                <li><a href="#">Review</a></li>
+              </ol>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
         <script>
             window.onload = function(){
+
                 let reference = document.querySelectorAll(".table tbody button")
                 let rowReference = document.querySelectorAll(".table tbody tr")
                 console.log(rowReference)
@@ -231,6 +294,67 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                         rowReference[i].remove()
                     })
                 }
+
+                let buttonClear = document.querySelector(".modal-footer #clearBtn")
+                let referenceModal = document.querySelectorAll(".form-control")
+                console.log(referenceModal)
+                buttonClear.addEventListener("click",function(){
+                    document.querySelector("#checkbox").checked= false
+                    for(let i=0;i<referenceModal.length; i++){
+                        referenceModal[i].value = ""
+                    }
+                })
+
+                let addBtn = document.querySelector("#addBtn")
+                addBtn.addEventListener("click",function(){
+                    
+                    let reference = document.querySelectorAll(".form-control")
+                    let array=[]
+                    for(let i=0; i<3; i++){
+                        array.push(reference[i].value)
+                    }
+                    if(array[0] !== "" && array[1] !== "" && array[2] !== ""){
+                        let tbody = document.querySelector("tbody")
+                        let newTr = document.createElement("tr")
+                        let newTd0 = document.createElement("th")
+                        let newTd1 = document.createElement("td")
+                        let newTd2 = document.createElement("td")
+                        let newTd3 = document.createElement("td")
+                        let newTd4 = document.createElement("button")
+
+                        newTd4.classList="btn btn-danger"
+                        newTd4.innerText="Delete"
+                        newTd3.appendChild(newTd4)
+
+
+                        newTd0.innerText = array[0]
+                        newTd1.innerText = array[1]
+                        newTd2.innerText = array[2]
+
+                        newTr.appendChild(newTd0)
+                        newTr.appendChild(newTd1)
+                        newTr.appendChild(newTd2)
+                        newTr.appendChild(newTd3)
+                        tbody.appendChild(newTr)
+                        alert("A new track was added")
+                        let referenceModal = document.querySelectorAll(".form-control")
+                        for(let i=0;i<referenceModal.length; i++){
+                        referenceModal[i].value = ""
+                    }
+                        document.querySelector("#addBtn").setAttribute("data-dismiss","modal")
+                    }else{
+                        alert("You need to fill the required inputs!")
+                        let requiredInput = document.querySelectorAll(".form-control")
+                        for(let i= 0; i<3; i++){
+                            requiredInput[i].style.borderColor = "red"
+                        }
+                    }
+
+
+                })
+
+                
+            
             }
         </script>
     </body>
