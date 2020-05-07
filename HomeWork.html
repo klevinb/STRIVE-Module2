@@ -14,11 +14,19 @@
         .container > p {
             text-align: center;
         }
+
+        .navbar{
+          background-color: blue !important;
+        }
+        .navbar a{
+          color: white !important;
+        }
+
         h1{
             font-weight: 100;
         }
         .row .col-6{
-            background-color: green;
+            background-color: rgba(0, 165, 0, 0.699);
             text-align: center;
             height: 400px;
             z-index: -1;
@@ -30,9 +38,21 @@
         #exe1 {
             border: 2px solid black;
             border-radius: 25px;
+            overflow: hidden;
         }
-        .row .col .row {
+
+        #exe1 .col-6,
+        #exe1 .col-2{
+          color: white;
+        }
+        #exe1 .col .row:nth-last-of-type(1) {
             background-color: black;
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            align-content: center;
+            flex-grow: 1;
+            text-align: center;
         }
         .row .col .card .card-header {
             font-weight: 600;
@@ -57,27 +77,32 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
+        <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+          </div>
         </div>
       </nav>
     <div class="container">
         <h1 class="pt-4">Exercise 1</h1>
         <p>Ricreate this table just using Bootstrap4 classes or styling, without adding / removing any DOM element</p>
         <div id="exe1" class="row">
-            <div class="col-6">
-
+            <div class="col-6 d-flex justify-content-center flex-column">
+              <p>First Column<br>Height 400px;
+              <br>Green-ish background<br>Text Centered</p>
             </div>
-            <div class="col-2">
-
+            <div class="col-2 d-flex justify-content-end flex-column">
+              <p>Second Column<br>Text To The bottom<br>
+              Bold, Blueish<br>
+              background</p>
             </div>
             <div class="col">
                 <div class="row">
@@ -101,6 +126,7 @@
                             2 GB of storage<br>
                             Email support<br>
                             Help center access</p>
+                        <button type="button" class="btn btn-outline-primary m-3">Sign Up For Free</button>
                       </div>
                 </div>
                 <div class="col">
@@ -113,6 +139,7 @@
                         10 GB of storage<br>
                         Priority email support<br>
                         Help center access</p>
+                        <button class="btn btn-primary m-3" type="submit">Get Started</button>
                       </div>
                 </div>
                 <div class="col">
@@ -124,7 +151,8 @@
                         <p>30 users included<br>
                         15 GB of storage<br>
                         Phone and email support<br>
-                        Help center access</p>                        
+                        Help center access</p>  
+                        <button class="btn btn-primary m-3" type="submit">Contact Us</button>                      
                       </div>
                 </div>
             </div>
@@ -135,111 +163,142 @@
                 <div class="card">
                   <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                        <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                        <div style="padding: 5px;">Edit</div>
+                      </div>
+                      <div>9 mis</div>
+                    </div>
                   </div>
                 </div>
                 <div class="card">
                   <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                        <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                        <div style="padding: 5px;">Edit</div>
+                      </div>
+                      <div>9 mis</div>
+                    </div>
                   </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                        <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                        <div style="padding: 5px;">Edit</div>
+                      </div>
+                      <div>9 mis</div>
+                    </div>
                   </div>
                 </div>
               </div>
         </div>
         <div class="row pb-3">
-            <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
                   </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
+                  <div>9 mis</div>
                 </div>
               </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
+                  </div>
+                  <div>9 mis</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
+                  </div>
+                  <div>9 mis</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="row">
-            <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
                   </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </div>
+                  <div>9 mis</div>
                 </div>
               </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
+                  </div>
+                  <div>9 mis</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div style="border: 1px solid gray;border-radius: 4px;" class="d-flex">
+                    <div style="border-right: 1px solid gray; padding: 5px;">View</div>
+                    <div style="padding: 5px;">Edit</div>
+                  </div>
+                  <div>9 mis</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <h1 class="pt-4">Exercise 4</h1>
         <p>Structure this section as a blog! Check the image and recreate as best as you can!</p>
         <div class="row pt-3 pb-3">
             <div class="col-8">
+              <div class="d-flex align-items-center mb-3">
+                <h1><b>Page Heading</b></h1>
+                <label style="font-size: 30px; padding-left: 15px;">Secondary Text</label>
+              </div>
                 <div class="card">
                     <img src="https://via.placeholder.com/750x300" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" style="font-size: 30px;">Post title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                     <div class="card-body">
