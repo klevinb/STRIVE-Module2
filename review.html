@@ -302,6 +302,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                     document.querySelector("#checkbox").checked= false
                     for(let i=0;i<referenceModal.length; i++){
                         referenceModal[i].value = ""
+                        referenceModal[i].style.borderColor=""
                     }
                 })
 
@@ -324,6 +325,12 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
 
                         newTd4.classList="btn btn-danger"
                         newTd4.innerText="Delete"
+
+                        newTd4.addEventListener("click",function(){
+                            let lastChild = document.querySelector(".table tbody tr:last-child")
+                            lastChild.remove()
+                    })
+
                         newTd3.appendChild(newTd4)
 
 
@@ -337,17 +344,19 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                         newTr.appendChild(newTd3)
                         tbody.appendChild(newTr)
                         alert("A new track was added")
+                        document.querySelector("#addBtn").setAttribute("data-dismiss","modal")
                         let referenceModal = document.querySelectorAll(".form-control")
                         for(let i=0;i<referenceModal.length; i++){
                         referenceModal[i].value = ""
-                    }
-                        document.querySelector("#addBtn").setAttribute("data-dismiss","modal")
+                        referenceModal[i].style.borderColor =""
+                        }
                     }else{
                         alert("You need to fill the required inputs!")
                         let requiredInput = document.querySelectorAll(".form-control")
                         for(let i= 0; i<3; i++){
                             requiredInput[i].style.borderColor = "red"
                         }
+                        document.querySelector("#addBtn").removeAttribute("data-dismiss")
                     }
 
 
